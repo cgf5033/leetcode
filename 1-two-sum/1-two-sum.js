@@ -10,6 +10,7 @@ var twoSum = function(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         // if target - number at current postion is in the object
         let numberNeeded = target - nums[i];
+        console.log(memo[numberNeeded]);
         if (memo[numberNeeded] !== undefined) {
             return [i, memo[numberNeeded]];
         }
