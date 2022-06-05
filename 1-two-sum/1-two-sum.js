@@ -10,7 +10,6 @@ var twoSum = function(nums, target) {
         if (memo[numberNeeded] !== undefined) {
             return [i, memo[numberNeeded]];
         }
-        //hello
         memo[nums[i]] = i;
     }
 };
