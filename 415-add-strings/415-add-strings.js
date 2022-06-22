@@ -22,7 +22,6 @@ var addStrings = function(num1, num2) {
               rem = 0;
           }
           result = current + result;
-          
       } else if (i < num1.length) {
         let current = String(Number(n1[i]) + Number(rem));
           if (current.length > 1) {
