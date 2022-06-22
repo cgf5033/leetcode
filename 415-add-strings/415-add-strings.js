@@ -12,9 +12,9 @@ var addStrings = function(num1, num2) {
   let n2 = num2.split('').reverse();
   let result = '';
   let rem = 0;
-  for (let i = 0; i < Math.max(num1.length, num2.length); i++){
+  for (let i = 0; i < Math.max(num1.length, num2.length); i++) {
       let current = '';
-      if (i < num1.length && i < num2.length){
+      if (i < num1.length && i < num2.length) {
           current = String(Number(n1[i]) + Number(n2[i]) + Number(rem))
       } else if (i < num1.length) {
           current = String(Number(n1[i]) + Number(rem));
