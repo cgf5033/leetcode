@@ -21,7 +21,7 @@ var addStrings = function(num1, num2) {
           } else {
               rem = 0;
           }
-          result = current.concat(result);
+          result = current + result;
           
       } else if (i < num1.length) {
         let current = String(Number(n1[i]) + Number(rem));
@@ -31,7 +31,7 @@ var addStrings = function(num1, num2) {
           } else {
               rem = 0;
           }
-          result = current.concat(result);
+          result = current + result;
       } else {
           let current = String(Number(n2[i]) + Number(rem));
           if (current.length > 1) {
@@ -40,11 +40,11 @@ var addStrings = function(num1, num2) {
           } else {
               rem = 0;
           }
-          result = current.concat(result);
+          result = current + result;
       }
   }
   if (rem) {
-      result = String(rem) + result;
+      result = rem + result;
   }
   return result;
 };
