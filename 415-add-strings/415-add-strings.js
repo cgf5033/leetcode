@@ -29,8 +29,5 @@ var addStrings = function(num1, num2) {
       }
       result = current + result;
   }
-  if (rem) {
-      result = rem + result;
-  }
-  return result;
+  return rem ? rem + result : result;
 };
