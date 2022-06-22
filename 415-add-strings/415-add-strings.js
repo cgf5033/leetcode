@@ -13,34 +13,21 @@ var addStrings = function(num1, num2) {
   let result = '';
   let rem = 0;
   for (let i = 0; i < Math.max(num1.length, num2.length); i++){
+      let current = '';
       if (i < num1.length && i < num2.length){
-          let current = String(Number(n1[i]) + Number(n2[i]) + Number(rem))
-          if (current.length > 1) {
-              rem = current[0];
-              current = current[1];
-          } else {
-              rem = 0;
-          }
-          result = current + result;
+          current = String(Number(n1[i]) + Number(n2[i]) + Number(rem))
       } else if (i < num1.length) {
-        let current = String(Number(n1[i]) + Number(rem));
-          if (current.length > 1) {
-              rem = current[0];
-              current = current[1];
-          } else {
-              rem = 0;
-          }
-          result = current + result;
+          current = String(Number(n1[i]) + Number(rem));
       } else {
-          let current = String(Number(n2[i]) + Number(rem));
-          if (current.length > 1) {
-              rem = current[0];
-              current = current[1];
-          } else {
-              rem = 0;
-          }
-          result = current + result;
+          current = String(Number(n2[i]) + Number(rem));
       }
+      if (current.length > 1) {
+          rem = current[0];
+          current = current[1];
+      } else {
+          rem = 0;
+      }
+      result = current + result;
   }
   if (rem) {
       result = rem + result;
