@@ -3,12 +3,14 @@
  * @param {number} target
  * @return {number[]}
  */
+
+// memo[number needed] = index
+
 var twoSum = function(nums, target) {
     let memo = {};
     for (let i = 0; i < nums.length; i++) {
-        let numberNeeded = target - nums[i];
-        if (memo[numberNeeded] !== undefined) {
-            return [i, memo[numberNeeded]];
+        if (memo[target - nums[i]] !== undefined) {
+                return [memo[target - nums[i]], i];
         }
         memo[nums[i]] = i;
     }
