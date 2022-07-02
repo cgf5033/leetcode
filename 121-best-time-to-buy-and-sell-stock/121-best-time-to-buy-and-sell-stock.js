@@ -9,7 +9,6 @@ var maxProfit = function(prices) {
   while (right < prices.length) {
     if (prices[left] < prices[right]) {
       let profit = prices[right] - prices[left]; // our current profit
-
       max_profit = Math.max(max_profit, profit);
     } else {
       left = right;
